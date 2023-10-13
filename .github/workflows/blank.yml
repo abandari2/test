@@ -36,5 +36,5 @@ jobs:
           cd test
           git checkout main
           git pull origin main
-          git merge dev
+          git merge origin/dev
           git push -u origin main
