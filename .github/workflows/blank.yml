@@ -38,5 +38,5 @@ jobs:
           git config --global user.name "abandari2"
           git checkout main
           git pull origin main
-          git merge dev
+          git merge origin/dev
           git push -u origin main
