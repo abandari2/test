@@ -12,6 +12,9 @@ on:
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+
+permissions:
+  contents: write
 env: 
   MY_REPO: https://${{secrets.GITHUB_TOKEN}}@github.com/abandari2/test.git
 
@@ -24,7 +27,9 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-
+      - name: Check out this repo
+        uses: actions/checkout@v2
+        
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo Hello, world!
