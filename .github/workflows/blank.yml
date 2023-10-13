@@ -34,7 +34,9 @@ jobs:
         run: |
           git clone ${{env.MY_REPO}}
           cd test
+          git config --global user.email "abhishekbandari460@gmail.com"
+          git config --global user.name "abandari2"
           git checkout main
           git pull origin main
-          git merge origin/dev
+          git merge dev
           git push -u origin main
