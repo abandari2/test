@@ -39,4 +39,4 @@ jobs:
           git checkout main
           git pull origin main
           git merge origin/dev
-          git push https://${{secrets.GITHUB_TOKEN}}@github.com/abandari2/test.git
+          git push ${{env.MY_REPO}}
